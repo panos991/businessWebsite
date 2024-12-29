@@ -4,76 +4,97 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#000000">
-  <meta name="description" content="Web site created using HTML">
+  <meta name="description" content="Portfolio of Panagiotis Andromidas - Web Developer">
   <title>Panagiotis Andromidas - Portfolio</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f4f7fb;
+      color: #333;
     }
-    
+
     header {
       background-image: url('headerIcon.jpg');
       background-size: cover;
       background-position: center;
       color: white;
       text-align: center;
-      padding: 50px 20px;
+      padding: 80px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     header h1 {
       margin: 0;
-      font-size: 3em;
+      font-size: 3.5em;
+      font-weight: 700;
     }
 
     header p {
-      font-size: 1.2em;
+      font-size: 1.5em;
+      margin-top: 10px;
     }
 
     main {
-      padding: 20px;
+      padding: 60px 20px;
     }
 
     section {
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
 
     .card {
-      border: 1px solid #ddd;
-      border-radius: 8px;
+      border: none;
+      border-radius: 10px;
       padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: white;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      transition: box-shadow 0.3s;
     }
 
-    .card-content {
-      margin-bottom: 10px;
+    .card:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     }
 
-    h2 {
-      font-size: 2em;
-      color: #333;
+    .card h2 {
+      font-size: 2.5em;
+      font-weight: 600;
+      color: #444;
+    }
+
+    .card p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #555;
     }
 
     .skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 15px;
       justify-content: center;
+      margin-top: 20px;
     }
 
     .skill-chip {
       background-color: #4CAF50;
       color: white;
-      padding: 10px;
-      border-radius: 16px;
-      font-size: 1em;
+      padding: 12px 20px;
+      border-radius: 20px;
+      font-size: 1.1em;
+      transition: background-color 0.3s;
+    }
+
+    .skill-chip:hover {
+      background-color: #45a049;
     }
 
     .contact a {
       color: #4CAF50;
       text-decoration: none;
+      font-weight: 600;
     }
 
     .contact a:hover {
@@ -84,11 +105,23 @@
       background-color: #333;
       color: white;
       text-align: center;
-      padding: 5px 10px; /* Reduced padding for a smaller footer */
+      padding: 20px;
       position: fixed;
       width: 100%;
       bottom: 0;
-      font-size: 0.9em; /* Reduced font size */
+      font-size: 1em;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 60px 20px;
+      }
+      header h1 {
+        font-size: 2.5em;
+      }
+      header p {
+        font-size: 1.2em;
+      }
     }
   </style>
 </head>
@@ -101,36 +134,30 @@
   <main>
     <section class="about">
       <div class="card">
-        <div class="card-content">
-          <h2>About Me</h2>
-          <p>I have completed my studies at the School of Mathematics at EKPA. Since my school years, I developed an interest in mathematics and computers. In my subsequent academic journey, I wanted to enrich it with studies related to computer science, which I did. My experience in both academic and professional fields led me to engage in web application development.</p>
-        </div>
+        <h2>About Me</h2>
+        <p>I have completed my studies at the School of Mathematics at EKPA. Since my school years, I developed an interest in mathematics and computers. In my subsequent academic journey, I wanted to enrich it with studies related to computer science, which I did. My experience in both academic and professional fields led me to engage in web application development.</p>
       </div>
     </section>
 
     <section class="skills">
       <h2>Skills</h2>
       <div class="card">
-        <div class="card-content">
-          <div class="skills">
-            <div class="skill-chip">React</div>
-            <div class="skill-chip">JavaScript</div>
-            <div class="skill-chip">CSS</div>
-            <div class="skill-chip">HTML</div>
-            <div class="skill-chip">Node.js</div>
-            <div class="skill-chip">Java</div>
-            <div class="skill-chip">C#</div>
-          </div>
+        <div class="skills">
+          <div class="skill-chip">React</div>
+          <div class="skill-chip">JavaScript</div>
+          <div class="skill-chip">CSS</div>
+          <div class="skill-chip">HTML</div>
+          <div class="skill-chip">Node.js</div>
+          <div class="skill-chip">Java</div>
+          <div class="skill-chip">C#</div>
         </div>
       </div>
     </section>
 
     <section class="projects">
       <div class="card">
-        <div class="card-content">
-          <h2>Projects</h2>
-          <p>Ask for more information.</p>
-        </div>
+        <h2>Projects</h2>
+        <p>Ask for more information.</p>
       </div>
     </section>
 
